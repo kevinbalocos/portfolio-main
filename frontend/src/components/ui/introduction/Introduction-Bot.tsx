@@ -379,11 +379,9 @@ export const SplineScene: React.FC<SplineSceneProps> = memo(
         startTs = 0;
       };
 
-      const onBotShake = (ev: Event) => {
-        const detail = (ev as CustomEvent)?.detail ?? (ev as any)?.detail ?? {};
+      const onBotShake = (_ev: Event) => {
+        const detail = (_ev as CustomEvent)?.detail ?? (_ev as any)?.detail ?? {};
         const active = !!detail.active;
-        const message =
-          detail.message ?? (active ? "dont turn me off pls no" : undefined);
         const opts = {
           ampPx: detail.ampPx,
           freqHz: detail.freqHz,
@@ -412,7 +410,7 @@ export const SplineScene: React.FC<SplineSceneProps> = memo(
 
     // ---- thank-you message: shows after hover leaves ----
     useEffect(() => {
-      const onThankYou = (ev: Event) => {
+      const onThankYou = (_ev: Event) => {
         const rootNode = containerRef.current;
         if (!rootNode) return;
 
