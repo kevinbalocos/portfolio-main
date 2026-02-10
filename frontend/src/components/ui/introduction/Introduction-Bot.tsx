@@ -612,14 +612,9 @@ export function SplineSceneBasic() {
                 href="#projects"
                 className="px-8 py-3 border-2 border-teal-400 text-teal-400 font-semibold rounded hover:bg-teal-400/10 transition-colors"
               >
-                View My Work
+                some of my work
               </a>
-              <a
-                href="#contact"
-                className="px-8 py-3 bg-teal-400/20 border border-teal-400/50 text-teal-300 font-semibold rounded hover:bg-teal-400/30 transition-colors"
-              >
-                Get In Touch
-              </a>
+           
             </div>
 
             <div className="flex gap-6 mt-12">
