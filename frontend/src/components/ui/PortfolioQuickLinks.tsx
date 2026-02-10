@@ -14,7 +14,7 @@ export function PortfolioQuickLinks() {
       id: 1,
       title: "Portfolio V1",
       description: "double press me",
-      href: "walapa",
+      href: "https://piesway-v1.vercel.app/",
       imageSrc: portfolioV1,
     },
     {
