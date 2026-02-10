@@ -6,16 +6,19 @@ import { motion } from "framer-motion";
 interface AnimatedSkillCardProps {
   skill: string;
   delay?: number;
+  href?: string;
 }
 
 export const AnimatedSkillCard: React.FC<AnimatedSkillCardProps> = ({
   skill,
   delay = 0,
+  href,
 }) => {
   const [isHovered, setIsHovered] = useState(false);
+  const MotionTag = href ? (motion.a as typeof motion.div) : motion.div;
 
   return (
-    <motion.div
+    <MotionTag
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
@@ -24,6 +27,9 @@ export const AnimatedSkillCard: React.FC<AnimatedSkillCardProps> = ({
       onHoverStart={() => setIsHovered(true)}
       onHoverEnd={() => setIsHovered(false)}
       className="px-3 py-1.5 bg-gradient-to-r from-teal-500/10 to-blue-500/10 border border-teal-400/30 text-teal-300 rounded font-mono text-sm relative overflow-hidden cursor-pointer group"
+      href={href}
+      target={href ? "_blank" : undefined}
+      rel={href ? "noreferrer" : undefined}
     >
       {/* Animated gradient background on hover */}
       {isHovered && (
@@ -46,6 +52,6 @@ export const AnimatedSkillCard: React.FC<AnimatedSkillCardProps> = ({
       />
 
       <span className="relative z-10">{skill}</span>
-    </motion.div>
+    </MotionTag>
   );
 };

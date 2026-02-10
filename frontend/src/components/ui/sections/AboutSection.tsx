@@ -175,33 +175,37 @@ export function AboutSection() {
               </p>
               <div className="flex flex-wrap gap-3">
                 {[
-                  "React",
-                  "TypeScript",
-                  "Node.js",
-                  "PostgreSQL",
-                  "Full Stack",
-                  "System Design",
-                  "UI/UX",
-                  "Problem Solving",
-                  "tailwindcss",
-                  "Codeigniter",
-                  "Three.js",
-                  "Next.js",
-                  "Git",
-                  "Docker",
-                  "AWS",
-                  "PHP",
-                  "MySQL",
-                  "REST APIs",
-                  "Inter",
-                  "Shadcn UI",
-                  "Lucide",
-                  "MongoDB",
-                  "socket.io",
+                  { label: "React", href: "https://react.dev" },
+                  {
+                    label: "TypeScript",
+                    href: "https://www.typescriptlang.org",
+                  },
+                  { label: "Node.js", href: "https://nodejs.org" },
+                  { label: "PostgreSQL", href: "https://www.postgresql.org" },
+                  { label: "Full Stack" },
+                  { label: "System Design" },
+                  { label: "UI/UX" },
+                  { label: "Problem Solving" },
+                  { label: "tailwindcss", href: "https://tailwindcss.com" },
+                  { label: "Codeigniter", href: "https://codeigniter.com" },
+                  { label: "Three.js", href: "https://threejs.org" },
+                  { label: "Next.js", href: "https://nextjs.org" },
+                  { label: "Git", href: "https://git-scm.com" },
+                  { label: "Docker", href: "https://www.docker.com" },
+                  { label: "AWS", href: "https://aws.amazon.com" },
+                  { label: "PHP", href: "https://www.php.net" },
+                  { label: "MySQL", href: "https://www.mysql.com" },
+                  { label: "REST APIs" },
+                  { label: "Inter", href: "https://rsms.me/inter" },
+                  { label: "Shadcn UI", href: "https://ui.shadcn.com" },
+                  { label: "Lucide", href: "https://lucide.dev" },
+                  { label: "MongoDB", href: "https://www.mongodb.com" },
+                  { label: "socket.io", href: "https://socket.io" },
                 ].map((skill, index) => (
                   <AnimatedSkillCard
-                    key={skill}
-                    skill={skill}
+                    key={skill.label}
+                    skill={skill.label}
+                    href={skill.href}
                     delay={index * 0.05}
                   />
                 ))}
