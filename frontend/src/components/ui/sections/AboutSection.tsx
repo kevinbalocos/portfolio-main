@@ -6,8 +6,6 @@ import { SparklesCore } from "@/components/ui/Sparkles";
 import { EvervaultCard } from "@/components/ui/sections/ABOUT/evervault-card";
 import { AnimatedBackground } from "@/components/ui/sections/ABOUT/animated-background";
 import { AnimatedSkillCard } from "@/components/ui/sections/ABOUT/animated-skill-card";
-import { GlowButton } from "@/components/ui/sections/ABOUT/glow-button";
-import resumePdf from "@/components/attachments/CV-BALOCOS-MAIN.pdf";
 
 export function AboutSection() {
   return (
@@ -208,24 +206,6 @@ export function AboutSection() {
                   />
                 ))}
               </div>
-            </motion.div>
-
-            {/* CTA Buttons with Glow effect */}
-            <motion.div
-              className="flex flex-wrap gap-4 pt-8"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.5, duration: 0.8 }}
-            >
-              <GlowButton
-                className="flex flex-wrap "
-                href={resumePdf}
-                download="CV-BALOCOS-MAIN.pdf"
-                variant="secondary"
-              >
-                Download Resume →
-              </GlowButton>
             </motion.div>
           </motion.div>
         </div>
