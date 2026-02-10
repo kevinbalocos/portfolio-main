@@ -3,7 +3,6 @@
 import { motion } from "framer-motion";
 import profileImage from "@/components/attachments/profile-portfolio.png";
 import { SparklesCore } from "@/components/ui/Sparkles";
-import { TextShimmer } from "@/components/ui/text-shimmer";
 import { EvervaultCard } from "@/components/ui/sections/ABOUT/evervault-card";
 import { AnimatedBackground } from "@/components/ui/sections/ABOUT/animated-background";
 import { AnimatedSkillCard } from "@/components/ui/sections/ABOUT/animated-skill-card";
