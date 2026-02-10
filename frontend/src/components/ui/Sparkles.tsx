@@ -1,6 +1,7 @@
 "use client";
 
-import React, { useEffect, useRef } from "react";
+import type React from "react";
+import { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 
 interface Spark {
@@ -27,7 +28,7 @@ export const Sparkles: React.FC<SparklesProps> = ({
   particleSize = 2,
   sparkleCount = 50,
 }) => {
-  const [sparks, setSparks] = React.useState<Spark[]>([]);
+  const [sparks, setSparks] = useState<Spark[]>([]);
   const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -95,7 +96,7 @@ export const SparklesCore: React.FC<{
   speed = 1,
 }) => {
   const containerRef = useRef<HTMLDivElement>(null);
-  const [particles, setParticles] = React.useState<Spark[]>([]);
+  const [particles, setParticles] = useState<Spark[]>([]);
 
   useEffect(() => {
     const particleCount = Math.floor(

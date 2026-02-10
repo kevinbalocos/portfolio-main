@@ -1,6 +1,5 @@
 "use client";
 
-import React from "react";
 import { Component as LuminaInteractiveList } from "@/components/lumina-interactive-list";
 
 export function ProjectsSection() {

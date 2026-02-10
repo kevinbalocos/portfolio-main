@@ -1,6 +1,7 @@
 "use client";
 
-import React, { useEffect, useRef, useState, useCallback, memo } from "react";
+import type React from "react";
+import { useEffect, useRef, useState, useCallback, memo } from "react";
 import { useThreeD } from "@/contexts/ThreeDContext";
 import { cn } from "@/lib/utils";
 import { MagneticText } from "@/components/morphing-cursor";
