@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 import portfoliov1 from "@/components/attachments/portfolio-v1.png";
 import CustomerRelationshipManagement from "@/components/attachments/Customer-Relationship-Management.png";
 import BusinessPermit from "@/components/attachments/business-permit.png";
@@ -263,7 +263,6 @@ export function Component() {
 
       // New helpers
       let transitionTween: any = null; // GSAP tween for shader progress (so we can kill)
-      let hasUserInteracted = false; // track if user clicked nav (useful if you want different behavior later)
       let pendingManualTarget: number | null = null; // used for safety
 
       const TRANSITION_DURATION = () =>
@@ -561,7 +560,6 @@ export function Component() {
         }
 
         // Mark that a user manually navigated (so we can decide behavior later if needed)
-        hasUserInteracted = true;
         pendingManualTarget = targetIndex;
 
         // If there's an active GSAP transition tween, kill it so we can start fresh
@@ -641,7 +639,6 @@ export function Component() {
           item.addEventListener("click", (e) => {
             e.stopPropagation();
             // MARK: user interaction and navigate
-            hasUserInteracted = true;
             if (!isTransitioning && i !== currentSlideIndex) {
               navigateToSlide(i);
             } else {
