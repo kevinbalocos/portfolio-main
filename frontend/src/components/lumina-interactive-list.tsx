@@ -263,7 +263,6 @@ export function Component() {
 
       // New helpers
       let transitionTween: any = null; // GSAP tween for shader progress (so we can kill)
-      let pendingManualTarget: number | null = null; // used for safety
 
       const TRANSITION_DURATION = () =>
         SLIDER_CONFIG.settings.transitionDuration;
@@ -559,9 +558,6 @@ export function Component() {
           return;
         }
 
-        // Mark that a user manually navigated (so we can decide behavior later if needed)
-        pendingManualTarget = targetIndex;
-
         // If there's an active GSAP transition tween, kill it so we can start fresh
         try {
           if (transitionTween && transitionTween.kill) {
@@ -586,7 +582,6 @@ export function Component() {
           updateCounter(currentSlideIndex);
           updateNavigationState(currentSlideIndex);
           updateContent(currentSlideIndex);
-          pendingManualTarget = null;
           return;
         }
 
@@ -621,7 +616,6 @@ export function Component() {
                 targetTexture.userData.size;
               isTransitioning = false;
               transitionTween = null;
-              pendingManualTarget = null;
             },
           },
         );
