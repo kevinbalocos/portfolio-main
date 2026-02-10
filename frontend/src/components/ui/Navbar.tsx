@@ -1,11 +1,11 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { useThreeD } from "@/contexts/ThreeDContext";
 
 export function Navbar() {
   const [activeSection, setActiveSection] = useState("home");
-  const { is3DEnabled, toggle3D, setIsHoveringToggle } = useThreeD();
+  const { is3DEnabled, toggle3D } = useThreeD();
 
   useEffect(() => {
     const handleScroll = () => {

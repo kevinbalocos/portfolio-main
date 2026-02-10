@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import { useState } from "react";
 import { CardStack, type CardStackItem } from "@/components/card-stack";
 import portfolioV1 from "@/components/attachments/portfolio-v1.png";
 import dcsi from "@/components/attachments/DCSI.png";
