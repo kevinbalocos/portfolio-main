@@ -19,49 +19,49 @@ export function FooterSection() {
           Loosely vibe-coded in{" "}
           <a
             href={techLinks[1].href}
-            className="text-white/80 hover:text-white transition-colors"
+            className="text-teal-500 hover:text-white transition-colors"
           >
             Visual Studio Code
           </a>{" "}
           by yours truly. Built with{" "}
           <a
             href={techLinks[2].href}
-            className="text-white/80 hover:text-white transition-colors"
+            className="text-teal-500 hover:text-white transition-colors"
           >
             Vite
           </a>
           ,{" "}
           <a
             href={techLinks[3].href}
-            className="text-white/80 hover:text-white transition-colors"
+            className="text-teal-500 hover:text-white transition-colors"
           >
             React
           </a>
           ,{" "}
           <a
             href={techLinks[4].href}
-            className="text-white/80 hover:text-white transition-colors"
+            className="text-teal-500 hover:text-white transition-colors"
           >
             TypeScript
           </a>{" "}
           and{" "}
           <a
             href={techLinks[5].href}
-            className="text-white/80 hover:text-white transition-colors"
+            className="text-teal-500 hover:text-white transition-colors"
           >
             Tailwind CSS
           </a>
           , deployed with{" "}
           <a
             href={techLinks[6].href}
-            className="text-white/80 hover:text-white transition-colors"
+            className="text-teal-500 hover:text-white transition-colors"
           >
             Vercel
           </a>
           . All text is set in the{" "}
           <a
             href={techLinks[7].href}
-            className="text-white/80 hover:text-white transition-colors"
+            className="text-teal-500 hover:text-white transition-colors"
           >
             Inter
           </a>{" "}
